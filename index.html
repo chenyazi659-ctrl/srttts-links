@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>一七互娱 · 配音工具入口</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'PingFang SC','Microsoft YaHei',sans-serif; background:#101216; color:#e8eaed; min-height:100vh; display:flex; align-items:center; justify-content:center; padding:24px; }
+  .card { background:#171a21; border:1px solid #2a2e38; border-radius:16px; padding:32px 28px; width:100%; max-width:520px; }
+  h1 { font-size:22px; font-weight:700; }
+  .sub { color:#8b93a1; font-size:13px; margin-top:6px; }
+  .hint { background:#1d222b; border:1px solid #2a2e38; border-radius:10px; padding:10px 12px; margin-top:16px; font-size:12px; color:#8b93a1; line-height:1.7; }
+  .tool { margin-top:18px; background:#1d222b; border:1px solid #2a2e38; border-radius:12px; padding:14px 16px; }
+  .tool .name { font-size:15px; font-weight:600; }
+  .tool .meta { font-size:11px; color:#8b93a1; margin-top:4px; }
+  .tool .status { display:inline-block; width:8px; height:8px; border-radius:50%; background:#52C41A; margin-right:6px; vertical-align:1px; }
+  .tool .status.off { background:#EA6668; }
+  .btns { display:flex; gap:10px; margin-top:12px; }
+  .btn { flex:1; text-align:center; padding:11px 0; border-radius:10px; font-size:14px; font-weight:600; cursor:pointer; border:none; transition:opacity .15s; text-decoration:none; }
+  .btn:active { opacity:.7; }
+  .btn.open { background:#3b82f6; color:#fff; display:block; }
+  .btn.copy { background:#232733; color:#e8eaed; }
+  .btn.copy.copied { background:#2e7d32; color:#fff; }
+  .foot { text-align:center; font-size:11px; color:#5b6370; margin-top:22px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>一七互娱 · 配音工具</h1>
+  <div class="sub">本页地址永久不变 · 工具网址自动更新 · 打不开时点一下"复制"发给我</div>
+  <div class="hint">📌 两个工具都用浏览器打开。<br/>网址每隔一段时间会自动更换，本页始终显示最新可用地址，<b>永远不用重新找我要</b>。</div>
+  <div class="tool">
+    <div class="name">📝 英文字幕 → 日文配音 <span class="status"></span></div>
+    <div class="meta">最后更新：14:55:16 · https://utc-estimation-strings-trailer.trycloudflare.com</div>
+    <div class="btns">
+      <a class="btn open" href="https://utc-estimation-strings-trailer.trycloudflare.com" target="_blank" rel="noopener">打开工具</a>
+      <button class="btn copy" onclick="copyUrl(this,'https://utc-estimation-strings-trailer.trycloudflare.com')">复制</button>
+    </div>
+  </div>
+  <div class="tool">
+    <div class="name">💬 文本配音（日语） <span class="status"></span></div>
+    <div class="meta">最后更新：14:55:17 · https://comedy-guardian-margin-probability.trycloudflare.com</div>
+    <div class="btns">
+      <a class="btn open" href="https://comedy-guardian-margin-probability.trycloudflare.com" target="_blank" rel="noopener">打开工具</a>
+      <button class="btn copy" onclick="copyUrl(this,'https://comedy-guardian-margin-probability.trycloudflare.com')">复制</button>
+    </div>
+  </div>
+  <div class="foot">一七互娱 · 网页更新于 2026-09-07 15:31:59</div>
+</div>
+<script>
+function copyUrl(btn, url){
+  if(!url){ alert('工具网址还没生成，稍后再试'); return; }
+  navigator.clipboard.writeText(url).then(function(){
+    var old = btn.textContent; btn.textContent = '已复制'; btn.classList.add('copied');
+    setTimeout(function(){ btn.textContent = old; btn.classList.remove('copied'); }, 1500);
+  });
+}
+</script>
+</body>
+</html>
