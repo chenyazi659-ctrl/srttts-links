@@ -7,7 +7,8 @@
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
   body { font-family:'PingFang SC','Microsoft YaHei',sans-serif; background:#101216; color:#e8eaed; min-height:100vh; display:flex; align-items:center; justify-content:center; padding:24px; }
-  .card { background:#171a21; border:1px solid #2a2e38; border-radius:16px; padding:32px 28px; width:100%; max-width:520px; }
+  .card { position:relative; background:#171a21; border:1px solid #2a2e38; border-radius:16px; padding:32px 28px; width:100%; max-width:520px; }
+  .badge { position:absolute; top:14px; right:14px; background:#EA6668; color:#fff; font-size:11px; font-weight:600; padding:3px 10px; border-radius:999px; letter-spacing:1px; }
   h1 { font-size:22px; font-weight:700; }
   .sub { color:#8b93a1; font-size:13px; margin-top:6px; }
   .hint { background:#1d222b; border:1px solid #2a2e38; border-radius:10px; padding:10px 12px; margin-top:16px; font-size:12px; color:#8b93a1; line-height:1.7; }
@@ -28,10 +29,11 @@
 <body>
 <div class="card">
   <h1>一七互娱 · 配音工具</h1>
+  <div class="badge">内部软件 · 请勿流通</div>
   <div class="sub">本页地址永久不变 · 工具网址自动更新 · 打不开时点一下"复制"发给我</div>
   <div class="hint">📌 两个工具都用浏览器打开。<br/>网址每隔一段时间会自动更换，本页始终显示最新可用地址，<b>永远不用重新找我要</b>。</div>
   <div class="tool">
-    <div class="name">📝 英文字幕 → 日文配音 <span class="status"></span></div>
+    <div class="name">🎙 SRT配音 <span class="status"></span></div>
     <div class="meta">最后更新：11:14:32 · https://serve-rachel-productivity-strings.trycloudflare.com</div>
     <div class="btns">
       <a class="btn open" href="https://serve-rachel-productivity-strings.trycloudflare.com" target="_blank" rel="noopener">打开工具</a>
@@ -39,7 +41,7 @@
     </div>
   </div>
   <div class="tool">
-    <div class="name">💬 文本配音（日语） <span class="status"></span></div>
+    <div class="name">📝 TXT配音 <span class="status"></span></div>
     <div class="meta">最后更新：11:24:03 · https://yet-powerseller-defining-underground.trycloudflare.com</div>
     <div class="btns">
       <a class="btn open" href="https://yet-powerseller-defining-underground.trycloudflare.com" target="_blank" rel="noopener">打开工具</a>
@@ -54,7 +56,7 @@
       <button class="btn copy" onclick="copyUrl(this,'https://belief-ton-timer-toner.trycloudflare.com')">复制</button>
     </div>
   </div>
-  <div class="foot">一七互娱 · 网页更新于 2026-09-09 13:58:50</div>
+  <div class="foot">一七互娱 · 网页更新于 2026-09-09 14:03:12</div>
 </div>
 <script>
 function copyUrl(btn, url){
